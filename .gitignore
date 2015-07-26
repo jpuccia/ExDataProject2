@@ -27,6 +27,8 @@
 
 .Rproj.user/2B185D82/sdb/s-A428A3C0/lock_file
 
+.Rproj.user/*
+
 *.zip
 
 *.csv
