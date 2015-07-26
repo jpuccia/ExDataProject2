@@ -30,7 +30,7 @@ plot5 <- function(){
         ## Plot the data to a png file
         png(filename = "plot5.png", width = 480, height = 480, units = "px")
         plot(neiVehicle$year, neiVehicle$Emissions, type = "l", col = "blue",
-             xlab="", ylab="Yearly Emissions (tons)", main = "Total Yearly Vehicle Emissions for Baltimore")
+             xlab="", ylab="Yearly PM2.5 Emissions (tons)", main = "Total Yearly PM2.5 Vehicle Emissions for Baltimore")
         
         ## Close the device to plot to a png file with the same name as this function.
         invisible(dev.off())

@@ -40,8 +40,8 @@ plot6 <- function(){
         ## Plot the data to a png file
         png(filename = "plot6.png", width = 480, height = 480, units = "px")
         p <- qplot(year, Emissions, data = neiVehicle, group = City, color = City, 
-                   geom = c("point", "line"), ylab = "Yearly Emissions (tons)", 
-                   xlab = "Year", main = "Total Vehicle Emissions in Baltimore and Los Angeles")
+                   geom = c("point", "line"), ylab = "Yearly PM2.5 Emissions (tons)", 
+                   xlab = "Year", main = "Total PM2.5 Vehicle Emissions in Baltimore and Los Angeles")
         print(p)
         
         ## Close the device to plot to a png file with the same name as this function.

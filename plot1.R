@@ -18,7 +18,7 @@ plot1 <- function(){
         ## Plot the data to a png file
         png(filename = "plot1.png", width = 480, height = 480, units = "px")
         plot(neiYearData$year, neiYearData$Emissions, type = "l", col = "red",
-             xlab="", ylab="Yearly Emissions (tons)", main = "Total Yearly Emissions for the US")
+             xlab="", ylab="Yearly PM2.5 Emissions (tons)", main = "Total Yearly PM2.5 Emissions for the US")
 
         ## Close the device to plot to a png file with the same name as this function.
         invisible(dev.off())

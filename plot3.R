@@ -21,8 +21,8 @@ plot3 <- function(){
         ## Plot the data to a png file
         png(filename = "plot3.png", width = 480, height = 480, units = "px")
         p <- qplot(year, Emissions, data = neiBaltType, group = Type, color = Type, 
-              geom = c("point", "line"), ylab = "Yearly Emissions (tons)", 
-              xlab = "Year", main = "Total Emissions in Baltimore by Type of Pollutant")
+              geom = c("point", "line"), ylab = "Yearly PM2.5 Emissions (tons)", 
+              xlab = "Year", main = "Total PM2.5 Emissions in Baltimore by Type of Pollutant")
         print(p)
         
         ## Close the device to plot to a png file with the same name as this function.

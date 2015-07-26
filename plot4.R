@@ -30,7 +30,7 @@ plot4 <- function(){
         ## Plot the data to a png file
         png(filename = "plot4.png", width = 480, height = 480, units = "px")
         plot(neiCoal$year, neiCoal$Emissions, type = "l", col = "green",
-             xlab="", ylab="Yearly Emissions (tons)", main = "Total Yearly Coal Emissions for U.S")
+             xlab="", ylab="Yearly PM2.5 Emissions (tons)", main = "Total Yearly PM2.5 Coal Emissions for U.S")
         
         ## Close the device to plot to a png file with the same name as this function.
         invisible(dev.off())
