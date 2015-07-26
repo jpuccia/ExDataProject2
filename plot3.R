@@ -7,6 +7,7 @@
 
 plot3 <- function(){
         library(ggplot2)
+        library(reshape2)
         ## Read the emissions data from the data folder under the working directory
         nei <- readRDS("./data/summarySCC_PM25.rds")
         

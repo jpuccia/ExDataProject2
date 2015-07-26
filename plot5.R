@@ -7,6 +7,7 @@
 plot5 <- function(){
         library(ggplot2)
         library(dplyr)
+        library(reshape2)
         ## Read the emissions data from the data folder under the working directory
         nei <- readRDS("./data/summarySCC_PM25.rds")
         
@@ -17,9 +18,10 @@ plot5 <- function(){
         ## Join our SCC lookup table with the nei data by performing a merge
         neiMerge <- merge(nei, scc, by = "SCC")
         
-        ## Melt the data down to group emissions by year but only for vehicle related source data
+        ## Melt the data down to group emissions by year but only for vehicle 
+        ##... related source data for the city of Baltimore.
         vehicleSources <- unique(scc$EI.Sector[grep("vehicle", scc$EI.Sector, ignore.case = TRUE)])
-        neiMelt <- melt(neiMerge[nei$fips==24510 & neiMerge$EI.Sector %in% vehicleSources,], 
+        neiMelt <- melt(neiMerge[neiMerge$fips=="24510" & neiMerge$EI.Sector %in% vehicleSources,], 
                         id=c("year"), measure.vars=c("Emissions"))
         
         ## Sum the Emissions by Year
